@@ -2,31 +2,38 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.1</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
+
     <groupId>com.github.free-axon</groupId>
-    <artifactId>groot</artifactId>
+    <artifactId>cosmic-kernel</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>groot</name>
-    <description>Groot is a Spring Boot project designed for creating and dispatching distributed queries.</description>
+    <name>cosmic kernel</name>
+    <description>A core library for distributed querying in Spring Boot applications</description>
     <properties>
         <java.version>17</java.version>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
     </properties>
+
     <dependencies>
+
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <groupId>org.axonframework</groupId>
+            <artifactId>axon-messaging</artifactId>
+            <version>4.9.1</version>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <groupId>org.axonframework.extensions.jgroups</groupId>
+            <artifactId>axon-jgroups</artifactId>
+            <version>4.9.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
+            <version>3.6.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>
