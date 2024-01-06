@@ -1,0 +1,13 @@
+*.iml
+\.idea/workspace\.xml
+
+\.idea/
+
+groot/target/
+rocket/target/
+
+logs/
+*.class
+.idea/
+
+target/
